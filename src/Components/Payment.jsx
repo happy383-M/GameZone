@@ -1,30 +1,24 @@
 import React from 'react';
-import { useLocation } from 'react-router-dom';
+import { useLocation, useNavigate } from 'react-router-dom';
+import { gameAPI } from '../services/api';
 import './ShopNow.css';
 
 function Payment() {
   const location = useLocation();
+  const navigate = useNavigate();
   const game = location.state?.game;
   const [selectedOption, setSelectedOption] = React.useState('');
   const [loading, setLoading] = React.useState(false);
 
   const handlePayment = async () => {
-    if (selectedOption) {
+    if (selectedOption && game) {
       setLoading(true);
       try {
-        const response = await fetch('http://localhost:8000/api/shop/payment', {
-          method: 'POST',
-          headers: {
-            'Content-Type': 'application/json',
-          },
-          body: JSON.stringify({
-            amount: game?.price || '99.99',
-            paymentMethod: selectedOption,
-            gameName: game?.name
-          })
-        });
-        const result = await response.json();
-        alert(`Payment successful for ${game?.name || 'game'}! Transaction ID: ${result.transactionId}`);
+        const response = await gameAPI.purchaseGame(game._id);
+        if (response.data.success) {
+          alert(`Payment successful for ${game.name}!`);
+          navigate('/library');
+        }
       } catch (error) {
         console.error('Payment error:', error);
         alert('Payment failed. Please try again.');

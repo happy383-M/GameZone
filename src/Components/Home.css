@@ -1,64 +1,14 @@
-
-h1 {
-  font-size: 30px;
-  margin: 10px 0;
-  text-align:left;
-  color:#00ffcc;
-  font-family:cursive;
-}
-
-.parent {
-  display: flex;
-    flex-direction: row;
-    margin: 10px;
-    padding: 40px;
-    gap: 10px;
-    flex-wrap: wrap;
-}
-
-.child{
-  
-  background: linear-gradient(to bottom, yellow, lightgreen);
-  width: 160px;
-  border-radius: 8px;
-  padding: 10px;
-  
-}
-.child img {
-  width: 100%;
-  height: 120px;
-  border-radius: 4px;
-}
-.child p {
-  font-size: 14px;
-  color: #000;
-  margin: 10px 0 0;
-}
-.child strong {
-  font-size: 16px;
-  color: #000;
-}
-
-.child span {
-  display: block;
-  font-weight: bold;
-  color: #333;
-}
-.child:hover{transform: scale(1.2);
-    transition: transform 0.3s ease-in-out;}
-    
 body {
   font-family: Arial, sans-serif;
-  background-image: url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTk6vifna_aIPVdkmH30_2bnloZ7tNRRES5vg&s); /* Replace with your actual image URL */
-  background-size: cover;     
-  background-position: center;   
-  background-repeat: no-repeat;  
+  background-image: url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTk6vifna_aIPVdkmH30_2bnloZ7tNRRES5vg&s);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
   margin: 0;
   padding: 20px;
   text-align: center;
-  image-resolution: 100%;
-              
 }
+
 .gaming-header {
   display: flex;
   justify-content: space-between;
@@ -68,31 +18,66 @@ body {
   color: #fff;
   font-family: 'Orbitron', sans-serif;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+  position: relative;
+}
+
+.hamburger-menu {
+  position: relative;
+}
+
+.hamburger-btn {
+  background: none;
+  border: none;
+  color: #fff;
+  font-size: 24px;
+  cursor: pointer;
+  padding: 8px;
+}
+
+.hamburger-btn:hover {
+  color: #00ffcc;
+}
+
+.menu-dropdown {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background-color: #1a1a1a;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
+  z-index: 1000;
+  min-width: 150px;
+}
+
+.menu-item {
+  padding: 12px 20px;
+  color: #fff;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.3s ease;
+  border-bottom: 1px solid #333;
+}
+
+.menu-item:hover {
+  background-color: #333;
+  color: #00ffcc;
+}
+
+.menu-item:first-child {
+  border-radius: 8px 8px 0 0;
+}
+
+.menu-item:last-child {
+  border-radius: 0 0 8px 8px;
+  border-bottom: none;
 }
 
 .gaming-logo {
-  font-size: 2REM;
+  font-size: 2rem;
   color: #00ffcc;
   font-weight: bold;
   text-transform: uppercase;
   letter-spacing: 2px;
-  gap: ;
-}
-
-.gaming-nav {
-  display: flex;
-  gap: 30px;
-}
-
-.gaming-nav a {
-  text-decoration: none;
-  color: #ccc;
-  font-size: 1rem;
-  transition: color 0.3s ease;
-}
-
-.gaming-nav a:hover {
-  color: #00ffcc;
 }
 
 .gaming-search {
@@ -121,97 +106,7 @@ body {
   background-color: #00bba3;
 }
 
-/* ...existing code... */
 
-img {
-  display: block;
-  margin: 30px auto;
-  max-width: 90vw;
-  max-height: 400px;
-  border-radius: 12px;
-  box-shadow: 0 4px 16px rgba(0,0,0,0.3);
-  border: 3px solid #00ffcc;
-}
-
-/* Header.css */
-
-.gaming-header {
-    background-color: #282c34;
-    padding: 20px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    color: white;
-}
-
-.gaming-logo {
-    font-size: 24px;
-    font-weight: bold;
-}
-
-.gaming-nav {
-    display: flex;
-    gap: 15px;
-}
-
-.gaming-link {
-    background: none;
-    border: none;
-    color: white;
-    cursor: pointer;
-    font-size: 16px;
-}
-
-.gaming-search {
-    display: flex;
-    align-items: center;
-}
-
-.gaming-search input {
-    padding: 5px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-}
-
-.gaming-search button {
-    margin-left: 5px;
-    background-color: #61dafb;
-    border: none;
-    padding: 5px 10px;
-    cursor: pointer;
-}
-
-.parent {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-around;
-    padding: 20px;
-}
-
-.child {
-    width: 200px;
-    margin: 10px;
-    text-align: center;
-}
-
-.child img {
-    width: 100%;
-    height: auto;
-    border-radius: 8px;
-}
-
-.child p {
-    margin-top: 10px;
-}
-
-
-h1 {
-  font-size: 30px;
-  margin: 10px 0;
-  text-align: left;
-  color: #00ffcc;
-  font-family: cursive;
-}
 
 .parent {
   display: flex;
@@ -231,6 +126,11 @@ h1 {
   margin: 10px;
   text-align: center;
   box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+.child:hover {
+  transform: scale(1.05);
+  transition: transform 0.3s ease-in-out;
 }
 
 .child img {
@@ -253,76 +153,16 @@ h1 {
   color: #000;
 }
 
-.child span {
-  display: block;
+.child button {
+  background-color: #00ffcc;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 4px;
+  cursor: pointer;
   font-weight: bold;
-  color: #333;
+  margin-top: 8px;
 }
 
-.child:hover {
-  transform: scale(1.05);
-  transition: transform 0.3s ease-in-out;
+.child button:hover {
+  background-color: #00bba3;
 }
-
-body {
-  font-family: Arial, sans-serif;
-  background-image: url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTk6vifna_aIPVdkmH30_2bnloZ7tNRRES5vg&s);
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  margin: 0;
-  padding: 20px;
-  text-align: center;
-}
-.child img {
-  border: 2px solid red;
-}
-
-
-.hamburger {
-  background: none;
-  border: none;
-  color: #fff;
-  font-size: 24px;
-  cursor: pointer;
-  padding: 8px;
-}
-
-.hamburger-menu {
-  position: absolute;
-  top: 70px;
-  right: 40px;
-  background-color: #1a1a1a;
-  border-radius: 8px;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
-  z-index: 1000;
-}
-
-.hamburger-menu button {
-  display: block;
-  width: 100%;
-  padding: 12px 20px;
-  background: none;
-  border: none;
-  color: #fff;
-  text-align: left;
-  cursor: pointer;
-  font-size: 16px;
-  transition: background-color 0.3s ease;
-}
-
-.hamburger-menu button:hover {
-  background-color: #333;
-  color: #00ffcc;
-}
-
-.hamburger-menu button:first-child {
-  border-radius: 8px 8px 0 0;
-}
-
-.hamburger-menu button:last-child {
-  border-radius: 0 0 8px 8px;
-}
-/* Remove duplicate .child and .parent rules below this line */
-
-

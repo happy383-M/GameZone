@@ -24,6 +24,8 @@ function App() {
         <Route path='/shopnow'  element={<ShopNow/>} />
         <Route path="/about" element={<About />} />
         <Route path="/library" element={<Library />} />
+        <Route path="/contact" element={<div style={{padding: '2rem', textAlign: 'center', backgroundColor: '#1a1a1a', color: '#fff', minHeight: '100vh'}}><h1 style={{color: '#00ffcc'}}>Contact Us</h1><p>Email: support@gamezone.com</p></div>} />
+        <Route path="/issues" element={<div style={{padding: '2rem', textAlign: 'center', backgroundColor: '#1a1a1a', color: '#fff', minHeight: '100vh'}}><h1 style={{color: '#00ffcc'}}>Report Issues</h1><p>Please contact our support team for any issues.</p></div>} />
         
         
 
